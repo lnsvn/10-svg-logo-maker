@@ -1,7 +1,7 @@
 // Import fs, inquirer, and function
 const fs = require('fs');
 const inquirer = require('inquirer');
-// const generateSvg = require('./lib/shapes');
+const { generateSvg } = require('./lib/shapes');
 
 // Logo design prompts
 inquirer
@@ -32,8 +32,7 @@ inquirer
     ])
     .then((data) => {
         const fileName = './examples/logo.svg';
-        
-        fs.writeFile(fileName, data, (err) => 
-            err ? console.error(err) : console.log('Generated logo.svg')
-        )
-    });
+        fs.writeFileSync(fileName, generateSvg(data));
+    })
+    .then(() => console.log("Generated logo.svg"))
+    .catch((err) => console.error(err));
