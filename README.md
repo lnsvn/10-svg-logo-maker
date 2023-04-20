@@ -4,7 +4,7 @@
 
   ## Description
 
-  This application allows you to quickly and easily create a simple logo for yout projects. After invoking the application, you will be prompted for content, and your inputs are then inserted into a logo.svg file. 
+  This application allows you to quickly and easily create a simple logo for your projects. After invoking the application, you will be prompted for content, and your inputs are then inserted into a logo.svg file. 
 
   ## Table of Contents
 
@@ -35,7 +35,7 @@
 
   ## Tests
 
-  To run the tests implemented into the projects, use the command: 
+  To run the tests implemented into the project, use the command: 
 
     npm run test
     
