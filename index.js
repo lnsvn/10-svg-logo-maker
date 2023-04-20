@@ -30,9 +30,12 @@ inquirer
             name: 'shapecolor',
         },
     ])
+    // creates svg file from the data inputs inserted into the generateSvg function
     .then((data) => {
         const fileName = './examples/logo.svg';
         fs.writeFileSync(fileName, generateSvg(data));
     })
+    // console log on completion
     .then(() => console.log("Generated logo.svg"))
+    // or catch and console log error
     .catch((err) => console.error(err));
